@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bike rental</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .container-fluid {
+            padding: 0px;
+        }
+
+        .mybox {
+
+            padding: 4rem;
+        }
+
+        .mobile {
+            border: 2px solid black;
+            border-radius: 30px;
+            padding: 10px;
+            background-color: #7374b0;
+        }
+
+        .cover2 {
+            border-radius: 20px;
+        }
+
+        .gallery {
+            min-height: 400px;
+            background-image: url("images/newcover.jpg");
+            background-size: cover;
+        }
+
+        .centered {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .contactform {
+            background-color: #F2F2F2;
+            border-radius: 20px;
+        }
+
+        .footerlink {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Bike Rental</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid gallery text-white mt-5">
+        <h1 class="display-1 fw-bold centered">Contact Us</h1>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row mb-5">
+            <div class="col-md p-5">
+                <h1> Get in touch</h1>
+                <p class="lead">Use our contact form for all information requests or contact us directly using the
+                    contact
+                    information below. </p>
+                <p class="lead">Feel free to get in touch with us via email or phone </p>
+                <hr>
+                <div class="row mb-5">
+                    <div class="col-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>
+                    </div>
+                    <div class="col">
+                        <h5 class="d-inline-flex">Our Office Location</h5>
+                        <p>
+                            Newcastle Upon Tyne, ​NE08,United Kingdom </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                    </div>
+                    <div class="col">
+                        <h5 class="d-inline-flex"> Phone (Landline)</h5>
+                        <p>+44 808 880 888</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md p-5 contactform">
+                <h2 class="mb-5"> Get started with a free quotation</h2>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message."></textarea>
+                </div>
+                <div class="d-grid gap-2 mx-auto">
+                    <button class="btn btn-primary" type="button">Submit your request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background-color: black;">
+        <div class="row mx-md-4 p-5">
+            <div class="col-md p-4">
+                <div class="row">
+                    <div class="col-md">
+                        <h2>About us</h2>
+                        <a class="footerlink" href="index.html">
+                            <p>Home</p>
+                        </a>
+                        <a class="footerlink" href="gallery.html">
+                            <p>Gallery</p>
+                        </a>
+                        <a class="footerlink" href="about.html">
+                            <p>Contact</p>
+                        </a>
+                    </div>
+                    <div class="col-md">
+                        <h2>Contact</h2>
+                        <p>Email: bikerent@bikerent.com</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md p-4">
+                <h2>Subscribe to our newsletter</h2>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
