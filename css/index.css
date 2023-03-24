@@ -80,3 +80,10 @@
 i {
     padding-right: 10px;
 }
+.tele{
+    text-decoration: none;
+    color: white;
+}
+.tele:hover{
+    color: rgb(255, 148, 148);
+}
