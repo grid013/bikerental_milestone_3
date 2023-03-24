@@ -43,6 +43,10 @@
 .social{
     font-size: 28px;
 }
+.social a{
+    text-decoration: none;
+    color: white;
+}
 i{
     padding-right: 10px;
 }

@@ -5,19 +5,30 @@
 .mybox {
     padding: 4rem;
 }
-.services{
+.zoom{
+    transition: transform .2s;
+}
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.services {
     margin-top: -8rem;
 }
-.service_img{
+
+.service_img {
     width: 100px;
 }
-.box1{
+
+.box1 {
     background-color: #3151AA;
 }
-.box2{
+
+.box2 {
     background-color: #5B6149;
 }
-.box3{
+
+.box3 {
     background-color: #945A5C;
 }
 
@@ -44,10 +55,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.contact_div{
+
+.contact_div {
     background-color: #3151AA;
 }
-.footer{
+
+.footer {
     background-color: black;
 }
 
@@ -55,9 +68,15 @@
     text-decoration: none;
     color: white;
 }
-.social{
+
+.social {
     font-size: 28px;
 }
-i{
+.social a{
+    text-decoration: none;
+    color: white;
+}
+
+i {
     padding-right: 10px;
 }
