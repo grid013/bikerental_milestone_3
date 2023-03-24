@@ -1,0 +1,42 @@
+.container-fluid {
+    padding: 0px;
+}
+
+.mybox {
+
+    padding: 4rem;
+}
+
+.mobile {
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #7374b0;
+}
+
+.cover2 {
+    border-radius: 20px;
+}
+
+.gallery {
+    min-height: 400px;
+    background-image: url("/images/1.jpg");
+    background-size: cover;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.footerlink{
+    text-decoration: none;
+    color: white;
+}
+.social{
+    font-size: 28px;
+}
+i{
+    padding-right: 10px;
+}

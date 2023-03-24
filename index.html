@@ -7,45 +7,8 @@
     <title>Bike rental</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <style>
-        .container-fluid {
-            padding: 0px;
-        }
-
-        .mybox {
-
-            padding: 4rem;
-        }
-
-        .mobile {
-            border: 2px solid black;
-            border-radius: 30px;
-            padding: 10px;
-            background-color: #7374b0;
-        }
-
-        .cover2 {
-            border-radius: 20px;
-        }
-
-        .indexcover {
-            height: 600px;
-            background-image: url("images/newcover.jpg");
-            background-size: cover;
-        }
-
-        .centered {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .footerlink {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </head>
 
@@ -77,21 +40,21 @@
 
     </div>
     <div class="container">
-        <div class="row text-white text-center" style="margin-top: -8rem;">
-            <div class="col-md mybox m-md-2 mb-2" style="background-color: #3151AA;">
-                <img src="images/creditcard.png" alt="" width="100px">
+        <div class="row text-white text-center services">
+            <div class="col-md mybox m-md-2 mb-2 box1">
+                <img class="service_img" src="images/creditcard.png" alt="">
                 <br><br>
                 <h2>Faster pick-up</h2>
                 <p class="lead">We have your contract already prepared</p>
             </div>
-            <div class="col-md mybox m-md-2 mb-2" style="background-color: #5B6149;">
-                <img src="images/motorcycle.png" alt="" width="100px">
+            <div class="col-md mybox m-md-2 mb-2 box2">
+                <img class="service_img" src="images/motorcycle.png" alt="">
                 <br><br>
                 <h2>Rental journey</h2>
                 <p class="lead"> Over 70 years of experience</p>
             </div>
-            <div class="col-md mybox m-md-2 mb-2" style="background-color: #945A5C;">
-                <img src="images/jeep.png" alt="" width="100px">
+            <div class="col-md mybox m-md-2 mb-2 box3">
+                <img class="service_img" src="images/jeep.png" alt="">
                 <br><br>
                 <h2>Better service</h2>
                 <p class="lead">We know you better, we serve you better</p>
@@ -130,7 +93,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid" style="background-color: #3151AA;">
+    <div class="container-fluid contact_div">
         <div class="row mx-md-5">
             <div class="col-md-8 p-md-5 p-4 my-5 text-white">
                 <h1 class="display-5">Book bike near you by giving us a call!</h1>
@@ -192,7 +155,7 @@
         </div>
 
     </div>
-    <div class="container-fluid" style="background-color: #945A5C;">
+    <div class="container-fluid box3">
         <div class="row mx-md-5 p-5 text-white">
             <div class="col-md">
                 <img src="images/cover2.jpg" alt="" width="100%" class="cover2">
@@ -213,7 +176,7 @@
         </div>
 
     </div>
-    <div class="container-fluid text-white" style="background-color: black;">
+    <div class="container-fluid text-white bg-black">
         <div class="row mx--md4 p-5">
             <div class="col-md p-4">
                 <div class="row">
@@ -232,6 +195,12 @@
                     <div class="col-md">
                         <h2>Contact</h2>
                         <p>Email: bikerent@bikerent.com</p>
+                        <h2>Social</h2>
+                        <p class="social">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-instagram"></i>
+                        </p>
                     </div>
                 </div>
 
