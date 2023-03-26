@@ -20,7 +20,7 @@
 
 .gallery {
     min-height: 400px;
-    background-image: url("/images/newcover.jpg");
+    background-image: url("../images/newcover.jpg");
     background-size: cover;
 }
 
