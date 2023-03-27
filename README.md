@@ -1,7 +1,7 @@
 
 <h1 align="center">Bike Rental</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](https://grid013.github.io/bikerental/)
 
 # About Bike rental :
 
@@ -86,22 +86,11 @@ Used to provide contact regarding our 24/7 contact number and emails.
 6. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
     - Photoshop was used to  resizing images and editing photos for the website.
 
-
-## Testing
-
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]
-
-
 ### Further Testing
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone13pro, iPhone 14pro max.
 -   A large amount of testing was done to ensure that all pages were linking correctly.
-
-
 
 
 ## Deployment
@@ -112,11 +101,10 @@ The project was deployed to GitHub Pages using the following steps...
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the now published site [link](https://grid013.github.io/bikerental/) in the "GitHub Pages" section.
 
 
 
@@ -126,17 +114,13 @@ The project was deployed to GitHub Pages using the following steps...
 
 ### Code
 
-
-
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-
-
 
 ### Content
 
 -   All content was written by the developer.
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+
 
 ### Media
 
@@ -146,4 +130,3 @@ The project was deployed to GitHub Pages using the following steps...
 
 -   My Mentor for continuous helpful feedback.
 
--   Tutor support at Code Institute for their support.
