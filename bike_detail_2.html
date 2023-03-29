@@ -7,11 +7,10 @@
     <title>Bike rental</title>
     <!-- Boostrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- About page stylesheet -->
-    <link rel="stylesheet" href="css/about.css">
+    <!-- Index page stylesheet -->
+    <link rel="stylesheet" href="css/index.css">
     <!-- Boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
 </head>
 
 <body>
@@ -39,100 +38,77 @@
             </div>
         </div>
     </nav>
-    <!-- Main page cover section  -->
-    <div class="container-fluid gallery text-white mt-5">
-        <h1 class="display-1 fw-bold centered">Contact Us</h1>
-    </div>
-    <!-- Contact info and form -->
-    <div class="mapouter p-5">
-        <div class="gmap_canvas"><iframe width="100%" height="510" id="gmap_canvas"
-                src="https://maps.google.com/maps?q=new castle uk&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br>
-            <style>
-                .mapouter {
-                    position: relative;
-                    text-align: right;
-                    height: 510px;
-                    width: 100%;
-                }
-            </style><a href="https://embedgooglemap.2yu.co">html embed google map</a>
-            <style>
-                .gmap_canvas {
-                    overflow: hidden;
-                    background: none !important;
-                    height: 510px;
-                    width: 100%;
-                }
-            </style>
-        </div>
-    </div>
-    <br><br>
-    <div class="container mt-5">
-        <div class="row mb-5">
-            <div class="col-md p-5">
-                <h1> Get in touch</h1>
-                <p class="lead">Use our contact form for all information requests or contact us directly using the
-                    contact
-                    information below. </p>
-                <p class="lead">Feel free to get in touch with us via email or phone </p>
-                <hr>
-                <div class="row mb-5">
-                    <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                        </svg>
-                    </div>
-                    <div class="col">
-                        <h5 class="d-inline-flex">Our Office Location</h5>
-                        <p>
-                            Newcastle Upon Tyne, ​NE08,United Kingdom </p>
-                    </div>
 
-                </div>
-                <div class="row">
-                    <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                        </svg>
-                    </div>
-                    <div class="col">
-                        <h5 class="d-inline-flex"> Phone (Landline)</h5>
-                        <p>+44 808 880 888</p>
-                    </div>
+    <!-- Bikes list -->
 
+    <div class="container mt-5 py-5">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="../images/bike2.png" alt="" width="100%">
                 </div>
 
             </div>
-            <div class="col-md p-5 contactform">
-                <form  onsubmit="event.preventDefault(); validateContactForm();">
-                    <h2 class="mb-5"> Get started with a free quotation</h2>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" required>
+            <div class="col">
+                <h2>KTM 200 Duke 2022</h2>
+                <p>Thanks to an ultra-compact single-cylinder 4-stroke power plant and a lightweight tubular chassis,
+                    the KTM 200 DUKE packs a mighty punch. An updated predatory design proudly displays its
+                    BEAST-inspired DNA and shouts DUKE. Make no mistake - the KTM 200 DUKE is an out-and-out street
+                    prowling brawler.
+                </p>
+                <div class="row">
+                    <div class="col card m-2 p-2">
+                        <div class="d-flex justify-content-center">
+                            <img src="../images/engine.svg" alt="" width="50px">
+                        </div>
+                        <p class="text-center fw-bold">Engine</p>
+                        <p class="text-center">199.5 cc</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" required>
+                    <div class="col card m-2 p-2">
+                        <div class="d-flex justify-content-center">
+                            <img src="../images/mileage.svg" alt="" width="50px">
+                        </div>
+                        <p class="text-center fw-bold">Mileage</p>
+                        <p class="text-center">33 kmpl</p>
+
                     </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="3"
-                            placeholder="Enter your message." required></textarea>
+                    <div class="col card m-2 p-2">
+                        <div class="d-flex justify-content-center">
+                            <img src="../images/gear.svg" alt="" width="50px">
+                        </div>
+                        <p class="text-center fw-bold">Transmission</p>
+                        <p class="text-center">6 Speed manual</p>
                     </div>
-                    <div class="d-grid gap-2 mx-auto">
-                        <button class="btn btn-primary" type="submit">Submit your request</button>
+                </div>
+                <div class="row py-4 ">
+                    <p class="price">Price: 50$/day</p>
+                </div>
+
+                <form onsubmit="event.preventDefault(); validateMyForm();" class="">
+                    <div class="row mb-3">
+                        <label for="days" class="col-sm-2 col-form-label fw-bold">Rent for</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" name="days" id="days" min="1" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-select">
+                                <option value="1">Days</option>
+                                <option value="2">Hours</option>
+                                <option value="3">Week</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 mt-5">
+                        <button class="btn btn-success" type="submit">Book</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
-    <!-- Footer -->
 
+
+
+    <!-- Footer section  -->
     <div class="container-fluid text-white bg-black p-5">
         <div class="row mx-md-4">
             <div class="col-md px-4">
@@ -157,7 +133,7 @@
                 </div>
 
             </div>
-            <!-- Newsletter part -->
+            <!-- Newsletter section  -->
             <div class="col-md px-4">
                 <h2>Subscribe to our newsletter</h2>
                 <p>Monthly digest of what's new and exciting from us.</p>
@@ -177,6 +153,7 @@
             </p>
         </div>
     </div>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -195,8 +172,11 @@
             </div>
         </div>
     </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+
+
 </body>
 
 </html>

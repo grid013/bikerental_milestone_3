@@ -87,3 +87,7 @@ i {
 .tele:hover{
     color: rgb(255, 148, 148);
 }
+.price{
+    font-size: x-large;
+    color: green;
+}
