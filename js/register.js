@@ -12,6 +12,13 @@ function register() {
     const form = document.getElementById("register_form")
     var formData = new FormData(form)
     const email = formData.get("email")
+    const password = formData.get("password")
+    const confirm_password = formData.get("confirm_password")
+    if(password != confirm_password){
+        document.getElementById("msg").innerHTML=`<div class="error">Password and confirm password dosen't match!</div>`
+        return false;
+
+    }
     let result = users.includes(email);
     if (result) {
         // alert("this email already exists")
@@ -29,6 +36,8 @@ function register() {
         localStorage.setItem("users", JSON.stringify(uu))
         const html = `<div class="success">Thanks for registering with us..now you can login</div>`
         document.getElementById("msg").innerHTML=html
+        form.reset()
+
     }
 
 }

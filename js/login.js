@@ -20,7 +20,7 @@ function login() {
             obj = JSON.parse(result)
             if (obj.password == password) {
                 localStorage.setItem("login", true)
-                window.location.href = "/";
+                window.location.href = "https://grid013.github.io/bikerental/";
             }
             else {
                 msg.innerHTML = `<p style="color:red">Wrong password</p>`;
