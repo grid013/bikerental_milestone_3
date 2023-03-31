@@ -5,9 +5,11 @@
 .mybox {
     padding: 4rem;
 }
-.zoom{
+
+.zoom {
     transition: transform .2s;
 }
+
 .zoom:hover {
     transform: scale(1.1);
 }
@@ -72,7 +74,8 @@
 .social {
     font-size: 28px;
 }
-.social a{
+
+.social a {
     text-decoration: none;
     color: white;
 }
@@ -80,14 +83,46 @@
 i {
     padding-right: 10px;
 }
-.tele{
+
+.tele {
     text-decoration: none;
     color: white;
 }
-.tele:hover{
+
+.tele:hover {
     color: rgb(255, 148, 148);
 }
-.price{
+
+.price {
     font-size: x-large;
     color: green;
+}
+
+.login {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.register {
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.resgister_img {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.error {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background: #fad2d2;
+}
+
+.success {
+    /* color: green; */
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background: #d2fad2;
 }

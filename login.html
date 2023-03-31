@@ -25,7 +25,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navlist">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="bike_listing.html">Bikes</a>
                     </li>
@@ -35,6 +35,9 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="about.html">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="register.html">Register</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -42,69 +45,33 @@
 
     <!-- Bikes list -->
 
-    <div class="container mt-5 py-5">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <img src="images/bike2.png" alt="" width="100%">
+    <div class="container mt-5 py-5 ">
+        <div class="row justify-content-center">
+            <div class="col-5 p-5 login text-center">
+                <h1>Login</h1>
+                <p>Welcome to Bike rental app. </p>
+                <br>
+                <div id="message" class="p-2">
+                    
                 </div>
+                <form onsubmit="event.preventDefault(); login();" id="loginform">
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="username" id="username" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" name="password" id="" placeholder="Password" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </div>
+                    <br>
+                    <p>Don’t have an account? <a href="register.html"><strong>Sign IN</strong></a></p>
 
-            </div>
-            <div class="col">
-                <h2>KTM 200 Duke 2022</h2>
-                <p>Thanks to an ultra-compact single-cylinder 4-stroke power plant and a lightweight tubular chassis,
-                    the KTM 200 DUKE packs a mighty punch. An updated predatory design proudly displays its
-                    BEAST-inspired DNA and shouts DUKE. Make no mistake - the KTM 200 DUKE is an out-and-out street
-                    prowling brawler.
-                </p>
-                <div class="row">
-                    <div class="col card m-2 p-2">
-                        <div class="d-flex justify-content-center">
-                            <img src="images/engine.svg" alt="" width="50px">
-                        </div>
-                        <p class="text-center fw-bold">Engine</p>
-                        <p class="text-center">199.5 cc</p>
-                    </div>
-                    <div class="col card m-2 p-2">
-                        <div class="d-flex justify-content-center">
-                            <img src="images/mileage.svg" alt="" width="50px">
-                        </div>
-                        <p class="text-center fw-bold">Mileage</p>
-                        <p class="text-center">33 kmpl</p>
 
-                    </div>
-                    <div class="col card m-2 p-2">
-                        <div class="d-flex justify-content-center">
-                            <img src="images/gear.svg" alt="" width="50px">
-                        </div>
-                        <p class="text-center fw-bold">Transmission</p>
-                        <p class="text-center">6 Speed manual</p>
-                    </div>
-                </div>
-                <div class="row py-4 ">
-                    <p class="price">Price: 50$/day</p>
-                </div>
-
-                <form onsubmit="event.preventDefault(); validateMyForm();" class="">
-                    <div class="row mb-3">
-                        <label for="days" class="col-sm-2 col-form-label fw-bold">Rent for</label>
-                        <div class="col-sm-4">
-                            <input type="number" class="form-control" name="days" id="days" min="1" required>
-                        </div>
-                        <div class="col-sm-4">
-                            <select class="form-select">
-                                <option value="1">Days</option>
-                                <option value="2">Hours</option>
-                                <option value="3">Week</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="d-grid gap-2 mt-5">
-                        <button class="btn btn-success" type="submit">Book</button>
-                    </div>
                 </form>
             </div>
         </div>
+
     </div>
 
 
@@ -175,7 +142,7 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
 
 
 </body>
