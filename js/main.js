@@ -19,7 +19,7 @@ function validateContactForm() {
 
 function logout() {
     localStorage.setItem("login", false)
-    window.location.href = "/";
+    window.location.href = "https://grid013.github.io/bikerental/";
 }
 
 var navs = document.getElementById("navlist")
