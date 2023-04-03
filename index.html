@@ -35,7 +35,7 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="about.html">Contact</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -109,8 +109,10 @@
                 <h1 class="display-5">Book bike near you by giving us a call!</h1>
             </div>
             <div class="col-md p-5 my-5 text-white">
-                <a class="tele" href="tel:+44-432-234-432"><h3 class="mobile zoom"><i class="bi bi-telephone"></i>+44-432-234-432</h3></a>
-                
+                <a class="tele" href="tel:+44-432-234-432">
+                    <h3 class="mobile zoom"><i class="bi bi-telephone"></i>+44-432-234-432</h3>
+                </a>
+
             </div>
         </div>
     </div>
@@ -189,6 +191,29 @@
         </div>
 
     </div>
+    <!-- Graph section -->
+    <div class="container p-2">
+        <div class="row p-5">
+            <div class="col-md">
+                <h2>Bike rental Achievements</h2>
+                <p class="lead">We partner with several new bike brands to offer test rides of their latest models in
+                    all four of our
+                    bike rental locations. Bikes from partner brands can be test ridden or rented so you can try them
+                    out
+                    before making a purchase!</p>
+                
+                <ul class="achive_list">
+                    <li>Better service</li>
+                    <li>24/7 support</li>
+                    <li>Fair prices</li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <canvas id="myChart" style="width:100%; height: 400px;"></canvas>
+            </div>
+        </div>
+
+    </div>
     <!-- Footer section  -->
     <div class="container-fluid text-white bg-black p-5">
         <div class="row mx-md-4">
@@ -209,7 +234,7 @@
                     <div class="col-md">
                         <h2>Contact</h2>
                         <p>Email: bikerent@bikerent.com</p>
-                        
+
                     </div>
                 </div>
 
@@ -235,7 +260,46 @@
         </div>
     </div>
 
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const xValues = ["Aug", "Sept", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar"];
+        const yValues = [40, 50, 55, 60, 70, 80, 85, 88];
+
+        new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    fill: false,
+                    lineTension: 0.5,
+                    backgroundColor: "red",
+                    borderColor: "red",
+                    borderWidth: 3,
+                    pointRadius: 3.5,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                scales: {
+                    yAxes: [{ ticks: { min: 0, max: 100 } }],
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "% Bikes rented over last 8 months",
+                        font: { weight: 'bold', size: 20 },
+
+                    },
+                    legend: {
+                        display: false,
+                        position: 'bottom',
+                    },
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

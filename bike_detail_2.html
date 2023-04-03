@@ -86,12 +86,144 @@
                 </div>
 
                 <form onsubmit="event.preventDefault(); validateMyForm();" class="">
+                    <div class="row mb-5">
+                        <div class="col">
+                            <label for="from" class="form-label fw-bold">From</label>
+                            <select class="form-select" required name="from">
+                                <option selected value="">--</option>
+                                <option value='Tirana'>Tirana</option>
+                                <option value='Durrës'>Durrës</option>
+                                <option value='Vlorë'>Vlorë</option>
+                                <option value='Kamëz'>Kamëz</option>
+                                <option value='Fier'>Fier</option>
+                                <option value='Shkodër'>Shkodër</option>
+                                <option value='Elbasan'>Elbasan</option>
+                                <option value='Korçë'>Korçë</option>
+                                <option value='Sarandë'>Sarandë</option>
+                                <option value='Berat'>Berat</option>
+                                <option value='Lushnjë'>Lushnjë</option>
+                                <option value='Kavajë'>Kavajë</option>
+                                <option value='Gjirokastër'>Gjirokastër</option>
+                                <option value='Pogradec'>Pogradec</option>
+                                <option value='Fushë-Krujë'>Fushë-Krujë</option>
+                                <option value='Laç'>Laç</option>
+                                <option value='Kukës'>Kukës</option>
+                                <option value='Sukth'>Sukth</option>
+                                <option value='Lezhë'>Lezhë</option>
+                                <option value='Patos'>Patos</option>
+                                <option value='Peshkopi'>Peshkopi</option>
+                                <option value='Librazhd-Qendër'>Librazhd-Qendër</option>
+                                <option value='Kuçovë'>Kuçovë</option>
+                                <option value='Krujë'>Krujë</option>
+                                <option value='Vorë'>Vorë</option>
+                                <option value='Burrel'>Burrel</option>
+                                <option value='Libonik'>Libonik</option>
+                                <option value='Rrëshen'>Rrëshen</option>
+                                <option value='Belsh'>Belsh</option>
+                                <option value='Divjakë'>Divjakë</option>
+                                <option value='Gramsh'>Gramsh</option>
+                                <option value='Mamurras'>Mamurras</option>
+                                <option value='Bulqizë'>Bulqizë</option>
+                                <option value='Vau i Dejës'>Vau i Dejës</option>
+                                <option value='Shëngjin'>Shëngjin</option>
+                                <option value='Ballsh'>Ballsh</option>
+                                <option value='Shijak'>Shijak</option>
+                                <option value='Bilisht'>Bilisht</option>
+                                <option value='Rrogozhinë'>Rrogozhinë</option>
+                                <option value='Librazhd'>Librazhd</option>
+                                <option value='Cërrik'>Cërrik</option>
+                                <option value='Roskovec'>Roskovec</option>
+                                <option value='Peqin'>Peqin</option>
+                                <option value='Krumë'>Krumë</option>
+                                <option value='Përmet'>Përmet</option>
+                                <option value='Prrenjas'>Prrenjas</option>
+                                <option value='Delvinë'>Delvinë</option>
+                                <option value='Bajram Curri'>Bajram Curri</option>
+                                <option value='Ura Vajgurore'>Ura Vajgurore</option>
+                                <option value='Rubik'>Rubik</option>
+                                <option value='Tepelenë'>Tepelenë</option>
+                                <option value='Poliçan'>Poliçan</option>
+                                <option value='Maliq'>Maliq</option>
+                                <option value='Çorovodë'>Çorovodë</option>
+                                <option value='Ersekë'>Ersekë</option>
+                                <option value='Koplik'>Koplik</option>
+                                <option value='Pukë'>Pukë</option>
+                                <option value='Lazarat'>Lazarat</option>
+                                <option value='Memaliaj'>Memaliaj</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="to" class="form-label fw-bold">To</label>
+                            <select class="form-select" required name="to">
+                                <option selected value="">--</option>
+                                <option value='Tirana'>Tirana</option>
+                                <option value='Durrës'>Durrës</option>
+                                <option value='Vlorë'>Vlorë</option>
+                                <option value='Kamëz'>Kamëz</option>
+                                <option value='Fier'>Fier</option>
+                                <option value='Shkodër'>Shkodër</option>
+                                <option value='Elbasan'>Elbasan</option>
+                                <option value='Korçë'>Korçë</option>
+                                <option value='Sarandë'>Sarandë</option>
+                                <option value='Berat'>Berat</option>
+                                <option value='Lushnjë'>Lushnjë</option>
+                                <option value='Kavajë'>Kavajë</option>
+                                <option value='Gjirokastër'>Gjirokastër</option>
+                                <option value='Pogradec'>Pogradec</option>
+                                <option value='Fushë-Krujë'>Fushë-Krujë</option>
+                                <option value='Laç'>Laç</option>
+                                <option value='Kukës'>Kukës</option>
+                                <option value='Sukth'>Sukth</option>
+                                <option value='Lezhë'>Lezhë</option>
+                                <option value='Patos'>Patos</option>
+                                <option value='Peshkopi'>Peshkopi</option>
+                                <option value='Librazhd-Qendër'>Librazhd-Qendër</option>
+                                <option value='Kuçovë'>Kuçovë</option>
+                                <option value='Krujë'>Krujë</option>
+                                <option value='Vorë'>Vorë</option>
+                                <option value='Burrel'>Burrel</option>
+                                <option value='Libonik'>Libonik</option>
+                                <option value='Rrëshen'>Rrëshen</option>
+                                <option value='Belsh'>Belsh</option>
+                                <option value='Divjakë'>Divjakë</option>
+                                <option value='Gramsh'>Gramsh</option>
+                                <option value='Mamurras'>Mamurras</option>
+                                <option value='Bulqizë'>Bulqizë</option>
+                                <option value='Vau i Dejës'>Vau i Dejës</option>
+                                <option value='Shëngjin'>Shëngjin</option>
+                                <option value='Ballsh'>Ballsh</option>
+                                <option value='Shijak'>Shijak</option>
+                                <option value='Bilisht'>Bilisht</option>
+                                <option value='Rrogozhinë'>Rrogozhinë</option>
+                                <option value='Librazhd'>Librazhd</option>
+                                <option value='Cërrik'>Cërrik</option>
+                                <option value='Roskovec'>Roskovec</option>
+                                <option value='Peqin'>Peqin</option>
+                                <option value='Krumë'>Krumë</option>
+                                <option value='Përmet'>Përmet</option>
+                                <option value='Prrenjas'>Prrenjas</option>
+                                <option value='Delvinë'>Delvinë</option>
+                                <option value='Bajram Curri'>Bajram Curri</option>
+                                <option value='Ura Vajgurore'>Ura Vajgurore</option>
+                                <option value='Rubik'>Rubik</option>
+                                <option value='Tepelenë'>Tepelenë</option>
+                                <option value='Poliçan'>Poliçan</option>
+                                <option value='Maliq'>Maliq</option>
+                                <option value='Çorovodë'>Çorovodë</option>
+                                <option value='Ersekë'>Ersekë</option>
+                                <option value='Koplik'>Koplik</option>
+                                <option value='Pukë'>Pukë</option>
+                                <option value='Lazarat'>Lazarat</option>
+                                <option value='Memaliaj'>Memaliaj</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="row mb-3">
                         <label for="days" class="col-sm-2 col-form-label fw-bold">Rent for</label>
                         <div class="col-sm-4">
                             <input type="number" class="form-control" name="days" id="days" min="1" required>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col">
                             <select class="form-select">
                                 <option value="1">Days</option>
                                 <option value="2">Hours</option>
@@ -99,6 +231,7 @@
                             </select>
                         </div>
                     </div>
+
                     <div class="d-grid gap-2 mt-5">
                         <button class="btn btn-success" type="submit">Book</button>
                     </div>
