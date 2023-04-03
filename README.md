@@ -73,17 +73,15 @@ Used to provide contact regarding our 24/7 contact number and emails.
 ### Frameworks, Libraries & Programs Used
 
     
-1. [Bootstrap 4.4.1:]( https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css)
+1. [Bootstrap 5.3:]( https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
-2. [zoom.css:]
-    - Zoom.css was used on the cards to make them biger when you move with mouse on them.
-
-3. [Jquery]  - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-4. [Git](https://git-scm.com/)
+2. [Chartjs:](https://www.chartjs.org/)
+    - Chart js library is used to draw line chart on canvas for showing analytics.
+3. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-5. [GitHub:](https://github.com/)
+4. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-6. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
+5. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
     - Photoshop was used to  resizing images and editing photos for the website.
 
 ### Further Testing
@@ -114,7 +112,7 @@ The project was deployed to GitHub Pages using the following steps...
 
 ### Code
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+-   [Bootstrap5](https://getbootstrap.com/docs/5.3/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
 ### Content
 

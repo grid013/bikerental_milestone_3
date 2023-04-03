@@ -126,12 +126,14 @@ i {
     border-radius: 5px;
     background: #d2fad2;
 }
-.achive_list{
+
+.achive_list {
     list-style: none;
     font-size: x-large;
     font-weight: bold;
-    
+
 }
+
 .achive_list li:before {
     content: "\2713";
     color: #b40303;
@@ -141,4 +143,9 @@ i {
     width: 1.5em;
     margin-left: -1em;
     padding: 5px;
+}
+
+.tick {
+    font-size: 40px;
+    color: green;
 }
