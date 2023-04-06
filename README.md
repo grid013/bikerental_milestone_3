@@ -53,6 +53,18 @@ Its designed to display bikes of all kind and let users to select bike and book.
 
 Gallery page - This page shares various pictures our user clicked through their journey of adventure .This is an initiative started by our company to share our experices with best bike rentals.
 
+# Bikes page:
+
+This page shows all the available bikes user can rent for according to days / hours / weeks for a fixed price.
+
+# Login page:
+
+This page let user login to the website. Some functionality requires login.
+
+# Register page:
+
+This page let user register with Bike rental website. Renting a bike requires user to register first.
+
 # Contact page :
 
 Used to provide contact regarding our 24/7 contact number and emails.
@@ -69,6 +81,14 @@ Used to provide contact regarding our 24/7 contact number and emails.
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Login / Register functionality:
+
+To implement and simulate login and registering users is achieved with javascript.
+All the data is stored on local storage of the browser. 
+When users register themselves the data is stored only on browsers local storage and on the basis of that login and logout is implemented.
+
 
 ### Frameworks, Libraries & Programs Used
 

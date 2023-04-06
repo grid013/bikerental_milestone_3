@@ -1,5 +1,5 @@
 function login() {
-    console.log("lgon");
+    // console.log("lgon");
     const form = document.getElementById("loginform")
     const username = form.username.value;
     const password = form.password.value;
@@ -8,7 +8,7 @@ function login() {
     const msg = document.getElementById("message")
     if (users) {
         var uu = JSON.parse(users)
-        console.log(uu)
+        // console.log(uu)
         var result = uu.find(
             function (str) {
                 const jj = JSON.parse(str)
