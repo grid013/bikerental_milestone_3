@@ -44,7 +44,7 @@ You can also send a request to our mail : bikerent@bikerent.com
 
 # Website Sitemap:
 
-Website have 3 pages including Home page gallery page and contact page.
+Website have 5 pages including Home page gallery page sign in page,register page and contact page.
 # Home page:
 
 Its designed to display bikes of all kind and let users to select bike and book.
@@ -147,4 +147,8 @@ The project was deployed to GitHub Pages using the following steps...
 ### Acknowledgements
 
 -   My Mentor for continuous helpful feedback.
+
+### License
+-   Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+
 
