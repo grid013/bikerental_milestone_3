@@ -64,6 +64,8 @@ Imagery is important. The large, background image is designed to be striking and
 ### Wireframes/Sitemap
 
 Bikerental Sitemap
+[html validation](documention/html.png.png)
+
 
 <p align="center">The website has 5 pages including a Home page gallery page sign-in page, register page and contact page.</p>
 
