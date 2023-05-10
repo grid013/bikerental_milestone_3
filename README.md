@@ -10,6 +10,8 @@ Head to the deployed site at [Bike Rental](https://grid013.github.io/bikerental/
 ## Table of Contents
 * [Abaut Bike Rental]
   * [Initial Discussion]
+  * [User Experience](#user-Experience)
+  * [User Stories](#user-Stories)
   * [Contact Us]
   * [Design]
   * [Colour Scheme]
@@ -21,6 +23,12 @@ Head to the deployed site at [Bike Rental](https://grid013.github.io/bikerental/
   * [Software, Frameworks & Libraries]
 * [Testing]
   * [Validation]
+   * [Lighthouse](#Lighthouse)
+    * [Index Page]
+    * [Gallery Page]
+    * [Login Page]
+    * [Register Page]
+    * [Contact Page]
   * [Manual Testing]
 * [Deployment & Local Development]
   * [Deploying to Github Pages]
@@ -36,7 +44,23 @@ Head to the deployed site at [Bike Rental](https://grid013.github.io/bikerental/
 Bike rental is a webiste used to rent best bikes from the top supplieres. We offers best bikes including high-quality bikes, ranging from mountain bikes to road bikes to hybrids, which are perfect for tackling any terrain.
 
 Our suppliers provide both automatic and manual transmission bikes in the UK, however, availability may vary depending on the supplier and the location where you are renting the vehicle.
-
+## User Experience
+## User Stories
+- First Time Visitor Goals
+    - As a first time visitor, I want to be able to navigate the site easily.
+    - As a first time visitor, I want to sign up and create a new account.
+    - As a first time visitor, I want to view the available bikes.
+    - As a first time visitor, I want to view the bikes schedule.
+    - As a first time visitor, I want to learn more about the bikes and their facilities.
+- Returning Visitor Goals
+    - As a returning visitor, I want to log in to my account.
+    - As a returning visitor, I want to view and update my profile information.
+    - As a returning visitor, I want to renew or cancel my membership plan.
+    
+- Frequent Visitor Goals
+    - As a frequent visitor, I want to book a bike.
+    - As a frequent visitor, I want to receive notifications of upcoming bikes.
+    - As a frequent visitor, I want to view the details and availability for every bike.
 ## Contact Us
 
 | Name  | Description |
@@ -144,6 +168,13 @@ Using Chrome Developer tools each page was verified to be working correctly.
 <br>
 
 ![image](https://user-images.githubusercontent.com/109947257/237013518-711055b3-b1ed-457e-af7a-aa4a030f2c20.png)
+
+### Lighthouse
+    * [Index Page](documention/index2.png)
+    * [Gallery Page](documention/gallery1.png)
+    * [Login Page](documention/login.png)
+    * [Register Page](documention/register.png)
+    * [Contact Page](documention/contact.png)
 
 ### Accessibility
 
