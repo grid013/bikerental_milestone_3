@@ -1,14 +1,6 @@
 
 <h1 align="center">Bike Rental</h1>
-<p align="center">
-  <a href="mailto:bikerent@bikerent.com?subject=Query%20about%20Bike%20Rental">
-    <img src="https://user-images.githubusercontent.com/109947257/236889767-3d58cc8e-4003-4855-a458-c9c09a3a0f70.png" alt="image">
-  </a>
-</p> <p align="center">
-  <a href="https://example.com">
-    <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="badge">
-  </a>
-</p>
+
 
 <br> 
 
@@ -16,14 +8,26 @@ Wanna See a Live Example?
 Head to the deployed site at [Bike Rental](https://grid013.github.io/bikerental/).
 
 ## Table of Contents
-* [About Bike Rental](#About-Bike-Rental)
-  * [Initial Discussion](#Initial-Discussion)
-* [Contact Us](#Contact-Us)
-* [Design](#Design)
-  * [Colour Scheme](#Colour-Scheme)
-  * [Imagery](#Imagery)
-  * [Wireframes/Sitemap](#Wireframes/Sitemap)
-
+* [Abaut Bike Rental]
+  * [Initial Discussion]
+  * [Contact Us]
+  * [Design]
+  * [Colour Scheme]
+  * [Imagery]
+  * [Wireframes/Sitemap]
+  * [Accessibility]
+* [Technologies Used]
+  * [Languages Used]
+  * [Software, Frameworks & Libraries]
+* [Testing]
+  * [Validation]
+  * [Manual Testing]
+* [Deployment & Local Development]
+  * [Deploying to Github Pages]
+  * [Local Development]
+    * [How to Fork]
+    * [How to Clone]
+ 
 <br>
 
 ## About Bike Rental
@@ -61,10 +65,11 @@ Imagery is important. The large, background image is designed to be striking and
 
 [Unsplash](https://unplash.com "Unsplash Free Images & Pictures") <br>
 [Pexels](https://www.pexels.com/ "Pexels Stock Photo Site")
+
 ### Wireframes/Sitemap
 
-Bikerental Sitemap
-[html validation](documention/html.png.png)
+## Bikerental Sitemap
+
 
 
 <p align="center">The website has 5 pages including a Home page gallery page sign-in page, register page and contact page.</p>
@@ -139,8 +144,51 @@ Using Chrome Developer tools each page was verified to be working correctly.
 <br>
 
 ![image](https://user-images.githubusercontent.com/109947257/237013518-711055b3-b1ed-457e-af7a-aa4a030f2c20.png)
+
+### Accessibility
+
+Whilst coding the site I have ensured that the site is accesible for all. This is achieve by using:-
+
+* Using Google Dev tools to check contrast of items. 
+* Using alt tags to describe the images on site.
+* Using semantic HTML
+
+
+## Technologies Used
+
+### Languages Used 
+* HTML and CSS
+* JavaScript
+
+### Software, Frameworks & Libraries Used
+
+
+* [Bootstrap Version 4.6 ](https://getbootstrap.com/docs/4.6/getting-started/introduction/ "Bootstrap Framework") was used to create the navigation bar, cards and form. They were modified to my suit needs. As a personal note to future myself, whilst Bootstrap is a excellent framework to get stuck into I feel it pulls away from the practising of core CSS, resulting in a lot of overriding.
+* [Font Awesome](https://fontawesome.com/icons "Font Awesome 6.2.1 Free Icons") was used for the stars icons seen on the reviews page and the social media icons in the footer.
+* Google Dev Tools were utilized to identify and resolve problems related to responsiveness and appearance. 
+* [Github](https://github.com/ "Github") was used to store my project in a repository. 
+* [Git](https://git-scm.com/ "Git Version Control") was used for Version Control.
+* [Google](https://www.google.co.uk "Google Search Engine") was used to research HTML & CSS.
+* [Gitpod](https:://www.gitpod.io "Gitpod Cloud IDE") the vast majority of my time was spent inside GitPod's VSCode Cloud IDE.
+* CDNs [Cloudflare](https://www.cloudflare.com/en-gb/learning/what-is-cloudflare/ "Cloudflare CDN") and  [JsDelivr](https://www.jsdelivr.com/ "JsDelivr") were used for Font Awesome icons CSS minified and Bootstrap 4.6 CSS minified.
+
 <br>
 
+## Testing
+
+### Validation
+I used the W3C Markup Validation Service on all pages of Bob's Bakery. I also validated the my own style.css with the CSS Validator.
+
+* [Index Page HTML](documention/index.html.png)
+* [About Page HTML](documention/about.html.png)
+* [Login Page HTML](documention/login.html.png)
+* [Gallery Page HTML](documention/gallery.html.png)
+* [Bike1 Page HTML](documention/bike1.html.png)
+* [Bike2 Page HTML](documention/bike2.html.png)
+* [Bike3 Page HTML](documention/bike3.html.png)
+* [Index style.css](documention/index.ccs.png)
+* [About style.css](documention/about.ccs.png)
+* [Gallery style.css](documention/gallery.ccs.png)
 
 ## Deployment & Local Development
 
