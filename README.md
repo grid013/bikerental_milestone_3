@@ -170,11 +170,11 @@ Using Chrome Developer tools each page was verified to be working correctly.
 ![image](https://user-images.githubusercontent.com/109947257/237013518-711055b3-b1ed-457e-af7a-aa4a030f2c20.png)
 
 ### Lighthouse
-    * [Index Page](documention/index2.png)
-    * [Gallery Page](documention/gallery1.png)
-    * [Login Page](documention/login.png)
-    * [Register Page](documention/register.png)
-    * [Contact Page](documention/contact.png)
+  * [Index Page](documention/index2.png)
+  * [Gallery Page](documention/gallery1.png)
+  * [Login Page](documention/login.png)
+  * [Register Page](documention/register.png)
+  * [Contact Page](documention/contact.png)
 
 ### Accessibility
 
