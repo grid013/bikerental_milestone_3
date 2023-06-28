@@ -7,89 +7,103 @@
     <title>Bike rental</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Boostrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Index page stylesheet -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css' )}}">
+    <!-- Gallery page stylesheet -->
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/gallery.css' )}}">
     <!-- Boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
     <!-- Nav bar This section contains logo and other pages links -->
+
     <nav class="navbar fixed-top navbar-expand-lg bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Bike Rental</a>
+            <a class="navbar-brand fw-bold" href="/">Bike Rental</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navlist">
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="bike_listing.html">Bikes</a>
+                        <a class="nav-link fw-bold" href="/bike_listing">Bikes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="gallery.html">Gallery</a>
+                        <a class="nav-link fw-bold" href="/gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="about.html">Contact</a>
+                        <a class="nav-link fw-bold" href="/about">Contact</a>
+                    </li>
+                    {% if not loggedIn %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="register.html">Register</a>
+                        <a class="nav-link fw-bold" href="/register">Register</a>
                     </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/logout">Logout</a>
+                    </li>
+                    {%endif%}
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Gallery page cover section  -->
 
-    <!-- Bikes list -->
-
-    <div class="container mt-5 py-5 ">
-        <div class="row justify-content-center">
-            <div class="col-md-5 p-5 login text-center">
-                <h1>Login</h1>
-                <p>Welcome to Bike rental app. </p>
-                <br>
-                <div id="message" class="p-2">
-                    
-                </div>
-                <form onsubmit="event.preventDefault(); login();" id="loginform">
-                    <div class="mb-3">
-                        <input type="email" class="form-control" name="username" id="username" placeholder="Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" class="form-control" name="password" id="" placeholder="Password" required>
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="submit">Login</button>
-                    </div>
-                    <br>
-                    <p>Don’t have an account? <a href="register.html"><strong>Sign IN</strong></a></p>
-
-
-                </form>
-            </div>
-        </div>
-
+    <div class="container-fluid gallery text-white mt-5">
+        <h1 class="display-1 fw-bold centered">Gallery</h1>
+    </div>
+    <!-- Video section -->
+    <div class="container mt-5">
+        <video width="100%" controls autoplay loop>
+            <source src="{{url_for( 'static', filename='video/video.mp4' )}}" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
     </div>
 
+    <div class="container mt-5">
+        <!-- Gallery -->
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="{{url_for( 'static', filename='images/cover2.jpg' )}}" class="w-100 shadow-1-strong rounded mb-4 zoom" alt="Boat on Calm Water" />
 
+                <img src="{{url_for( 'static', filename='images/2.jpg' )}}" class="w-100 shadow-1-strong rounded mb-4 zoom"
+                    alt="Wintry Mountain Landscape" />
+            </div>
 
-    <!-- Footer section  -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="{{url_for( 'static', filename='images/7.jpg' )}}" class="w-100 shadow-1-strong rounded mb-4 zoom" alt="Mountains in the Clouds" />
+
+                <img src="{{url_for( 'static', filename='images/4.jpg' )}}" class="w-100 shadow-1-strong rounded mb-4 zoom" alt="Boat on Calm Water" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="{{url_for( 'static', filename='images/5.jpg' )}}" class="w-100 shadow-1-strong rounded mb-4 zoom" alt="Waves at Sea" />
+
+                <img src="{{url_for( 'static', filename='images/6.jpg' )}}" class="w-100 shadow-1-strong rounded mb-4 zoom" alt="Yosemite National Park" />
+            </div>
+        </div>
+        <!-- Gallery -->
+    </div>
+    <!-- footer -->
     <div class="container-fluid text-white bg-black p-5">
         <div class="row mx-md-4">
             <div class="col-md px-4">
                 <div class="row">
                     <div class="col-md">
                         <h2>About us</h2>
-                        <a class="footerlink" href="index.html">
+                        <a class="footerlink" href="/">
                             <p>Home</p>
                         </a>
-                        <a class="footerlink" href="gallery.html">
+                        <a class="footerlink" href="/gallery">
                             <p>Gallery</p>
                         </a>
-                        <a class="footerlink" href="about.html">
+                        <a class="footerlink" href="/about">
                             <p>Contact</p>
                         </a>
                     </div>
@@ -101,7 +115,7 @@
                 </div>
 
             </div>
-            <!-- Newsletter section  -->
+            <!-- Newsletter section -->
             <div class="col-md px-4">
                 <h2>Subscribe to our newsletter</h2>
                 <p>Monthly digest of what's new and exciting from us.</p>
@@ -121,30 +135,8 @@
             </p>
         </div>
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thanks</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-center tick" ><i class="bi bi-check-lg"></i></p>
-                    <p class="text-center">Your request has been sent.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/login.js"></script>
-
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>

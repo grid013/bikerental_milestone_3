@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bike rental</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{url_for( 'static', filename='images/favicon.ico' )}}">
     <!-- Boostrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css' )}}">
     <!-- Index page stylesheet -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/index.css' )}}">
     <!-- Boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
@@ -18,7 +18,7 @@
     <!-- Nav bar This section contains logo and other pages links -->
     <nav class="navbar fixed-top navbar-expand-lg bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Bike Rental</a>
+            <a class="navbar-brand fw-bold" href="/">Bike Rental</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -27,14 +27,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navlist">
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="bike_listing.html">Bikes</a>
+                        <a class="nav-link fw-bold" href="/bike_listing">Bikes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="gallery.html">Gallery</a>
+                        <a class="nav-link fw-bold" href="/gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="about.html">Contact</a>
+                        <a class="nav-link fw-bold" href="/about">Contact</a>
                     </li>
+                    {% if not loggedIn %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/register">Register</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/logout">Logout</a>
+                    </li>
+                    {%endif%}
+                    {% if userData.usertype == "user" %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/logout">Admin</a>
+                    </li>
+                    {%endif%}
 
                 </ul>
             </div>
@@ -51,19 +68,19 @@
     <div class="container">
         <div class="row text-white text-center services">
             <div class="col-md mybox m-md-2 mb-2 box1 zoom">
-                <img class="service_img" src="images/creditcard.png" alt="">
+                <img class="service_img" src="{{url_for( 'static', filename='images/creditcard.png' )}}" alt="">
                 <br><br>
                 <h2>Faster pick-up</h2>
                 <p class="lead">We have your contract already prepared</p>
             </div>
             <div class="col-md mybox m-md-2 mb-2 box2 zoom">
-                <img class="service_img" src="images/motorcycle.png" alt="">
+                <img class="service_img" src="{{url_for( 'static', filename='images/motorcycle.png' )}}" alt="">
                 <br><br>
                 <h2>Rental journey</h2>
                 <p class="lead"> Over 70 years of experience</p>
             </div>
             <div class="col-md mybox m-md-2 mb-2 box3 zoom">
-                <img class="service_img" src="images/jeep.png" alt="">
+                <img class="service_img" src="{{url_for( 'static', filename='images/jeep.png' )}}" alt="">
                 <br><br>
                 <h2>Better service</h2>
                 <p class="lead">We know you better, we serve you better</p>
@@ -75,7 +92,7 @@
         <div class="row px-md-4 py-5">
             <div class="col-md">
                 <div class="row mb-3">
-                    <div class="col-3"><img src="images/free.png" alt="" width="80px"></div>
+                    <div class="col-3"><img src="{{url_for( 'static', filename='images/free.png' )}}" alt="" width="80px"></div>
                     <div class="col">
                         <h2> Free Cancellation</h2>
                     </div>
@@ -84,7 +101,7 @@
             </div>
             <div class="col-md">
                 <div class="row mb-3">
-                    <div class="col-3"><img src="images/dollar.png" alt="" width="80px"></div>
+                    <div class="col-3"><img src="{{url_for( 'static', filename='images/dollar.png' )}}" alt="" width="80px"></div>
                     <div class="col">
                         <h2>No Hidden Charges</h2>
                     </div>
@@ -93,7 +110,7 @@
             </div>
             <div class="col-md">
                 <div class="row mb-3">
-                    <div class="col-3"><img src="images/headset.png" alt="" width="80px"></div>
+                    <div class="col-3"><img src="{{url_for( 'static', filename='images/headset.png' )}}" alt="" width="80px"></div>
                     <div class="col">
                         <h2>24/7 Customer Support</h2>
                     </div>
@@ -173,7 +190,7 @@
     <div class="container-fluid box3">
         <div class="row mx-md-5 p-5 text-white">
             <div class="col-md">
-                <img src="images/cover2.jpg" alt="" width="100%" class="cover2">
+                <img src="{{url_for( 'static', filename='images/cover2.jpg' )}}" alt="" width="100%" class="cover2">
             </div>
             <div class="col-md m-2">
                 <h1 class="display-4">Bike rentals for every level of rider</h1>
@@ -221,13 +238,13 @@
                 <div class="row">
                     <div class="col-md">
                         <h2>About us</h2>
-                        <a class="footerlink" href="index.html">
+                        <a class="footerlink" href="/">
                             <p>Home</p>
                         </a>
-                        <a class="footerlink" href="gallery.html">
+                        <a class="footerlink" href="/gallery">
                             <p>Gallery</p>
                         </a>
-                        <a class="footerlink" href="about.html">
+                        <a class="footerlink" href="/about">
                             <p>Contact</p>
                         </a>
                     </div>
@@ -262,7 +279,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/graph.js"></script>
+    <script src="{{url_for( 'static', filename='js/graph.js' )}}"></script>
     
 </body>
 

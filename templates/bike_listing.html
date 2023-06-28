@@ -7,9 +7,9 @@
     <title>Bike rental</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Boostrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css' )}}">
     <!-- Index page stylesheet -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/index.css' )}}">
     <!-- Boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
@@ -18,7 +18,7 @@
     <!-- Nav bar This section contains logo and other pages links -->
     <nav class="navbar fixed-top navbar-expand-lg bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Bike Rental</a>
+            <a class="navbar-brand fw-bold" href="/">Bike Rental</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -27,14 +27,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navlist">
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="bike_listing.html">Bikes</a>
+                        <a class="nav-link fw-bold" href="/bike_listing">Bikes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="gallery.html">Gallery</a>
+                        <a class="nav-link fw-bold" href="/gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="about.html">Contact</a>
+                        <a class="nav-link fw-bold" href="/about">Contact</a>
                     </li>
+                    {% if not loggedIn %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/register">Register</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/logout">Logout</a>
+                    </li>
+                    {%endif%}
                 </ul>
             </div>
         </div>
