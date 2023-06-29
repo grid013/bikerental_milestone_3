@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bike rental</title>
+    <title>Add Bike</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Boostrap css -->
     <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css' )}}">
@@ -55,31 +55,44 @@
     <!-- Bikes list -->
 
     <div class="container mt-5 py-5">
-        <h1 class="text-center">Bike Listing</h1>
-        <div class="row p-2">
-            {% for bike in itemData%}
-            <div class="col-md-3">
-                <div class="p-3 card mb-4">
-                    <a href="">
-                        <img src="/static/uploads/{{bike.image}}" class="card-img-top" width="100px">
-                    </a>
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">{{bike.bikename}}</h5>
-                        <div class="d-flex justify-content-between">
-                            <p class="card-text price">{{bike.price}} £/day</p>
-                            <a href="bike_detail_1.html" ><button class="btn btn-primary">Book</button></a>
-                        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 card p-4 shadow">
+                <h2>Add bike</h2>
+                <p style="color: red;">{{error}}</p>
+                <form action="/addBike" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="bikeName" class="form-label">Title</label>
+                        <input type="text" name="bikeName" id="bikeName" class="form-control" required>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" name="description" id="description" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="engine" class="form-label">Engine</label>
+                        <input type="text" name="engine" id="engine" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mileage" class="form-label">Mileage</label>
+                        <input min="1" type="number" name="mileage" id="mileage" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="transmission" class="form-label">Transmission</label>
+                        <input type="text" name="transmission" id="transmission" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input min="1" type="number" name="price" id="price" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input type="file" name="image" id="image" class="form-control" required>
+                    </div>
+                    <button class="btn btn-success" type="submit">Add</button>
+                </form>
             </div>
-            {%endfor%}
-            
         </div>
-
     </div>
-
-
 
     <!-- Footer section  -->
     <div class="container-fluid text-white bg-black p-5">

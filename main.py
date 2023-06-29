@@ -6,6 +6,9 @@ from query import runQuery
 
 app = Flask(__name__)
 app.secret_key = 'random string'
+UPLOAD_FOLDER = 'static/uploads'
+ALLOWED_EXTENSIONS = set(['jpeg', 'jpg', 'png', 'gif'])
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def validate(email):
     userId = None
@@ -32,16 +35,66 @@ def makeSignin():
             userData = userData[0]
     return (userData, loggedIn)
 
+@app.route("/dashboard")
+def dashboard():
+    if 'email' not in session:
+        return redirect(url_for('root'))
+    userData, loggedIn = makeSignin()
+    itemData = runQuery('SELECT * FROM bikes where status = 1'.format(userData["userid"]),"select")
+
+    return render_template("dashboard.html", userData=userData, itemData=itemData, loggedIn=loggedIn)
+
+@app.route("/addBike", methods=["GET", "POST"])
+def addBike():
+    if 'email' not in session:
+        return redirect(url_for('root'))
+
+    userData, loggedIn = makeSignin()
+
+    if request.method == 'GET':
+        return render_template("add_bike.html",userData=userData , loggedIn=loggedIn)
+    elif request.method == 'POST':
+        file1 = request.files["image"]
+        path = os.path.join(app.config['UPLOAD_FOLDER'], file1.filename)
+        image = file1.filename
+
+        file1.save(path)
+
+        bikeName = request.form['bikeName']
+        description = request.form['description']
+        engine = request.form['engine']
+        mileage = request.form['mileage']
+        transmission = request.form['transmission']
+        price = request.form['price']
+        createdate = datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S")
+        updatedate = datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S")
+
+        try:
+            result = runQuery("INSERT INTO bikes (userid,image,bikeName,description,engine,mileage,transmission,price,createdate,updatedate) VALUES ({},'{}','{}','{}','{}','{}','{}','{}', '{}', '{}')".format(userData["userid"],image,bikeName,description,engine,mileage,transmission,price,createdate,updatedate),"insert")
+            response = "Request is completed successfully."
+            return redirect(url_for('dashboard'))
+        except Exception as e:
+            print(e)
+            response = "Request is failed."
+            return render_template("addBook.html",error=response)
+
 @app.route("/")
 def root():
     userData, loggedIn = makeSignin()
-    print(userData)
-    return render_template("index.html", userData = userData, loggedIn=loggedIn)
+    itemData = runQuery('SELECT * FROM bikes where status = 1 limit 2'.format(userData["userid"]),"select")
+    return render_template("index.html", userData = userData, loggedIn=loggedIn, itemData=itemData)
 
 @app.route("/bike_listing")
 def bike_listing():
     userData, loggedIn = makeSignin()
-    return render_template("bike_listing.html", userData = userData, loggedIn=loggedIn)
+    itemData = runQuery('SELECT * FROM bikes where status = 1'.format(userData["userid"]),"select")
+    return render_template("bike_listing.html", userData = userData, loggedIn=loggedIn, itemData=itemData)
+
+@app.route("/bike_detail")
+def bike_detail():
+    userData, loggedIn = makeSignin()
+    itemData = runQuery('SELECT * FROM bikes where status = 1'.format(userData["userid"]),"select")
+    return render_template("bike_detail.html", userData = userData, loggedIn=loggedIn, itemData=itemData)
 
 @app.route("/gallery")
 def gallery():

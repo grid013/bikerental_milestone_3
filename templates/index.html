@@ -49,7 +49,7 @@
                     {%endif%}
                     {% if userData.usertype == "user" %}
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="/logout">Admin</a>
+                        <a class="nav-link fw-bold" href="/dashboard">Admin</a>
                     </li>
                     {%endif%}
 
@@ -142,48 +142,24 @@
                 may vary depending on the supplier and the location where you are renting the vehicle.
             </p>
         </div>
+        {% for bike in itemData %}
         <div class="row my-4 p-4">
             <div class="col-md-4 p-4 text-center">
-                <img class="zoom" src="images/bike.png" alt="" height="200px">
+                <img class="zoom" src="/static/uploads/{{bike.image}}" alt="" height="200px">
             </div>
             <div class="col-md">
-                <h2>Dominar 400</h2>
-                <p>Dominar 400 is a touring beast. Get spoilt with a choice of accessories curated especially for a
-                    comfortable touring experience. Tall visor, hand guard, engine bash plate, USB charging port, leg
-                    guard, carrier + back stopper, navigation stay, and saddle stay* - need we say more? </p>
+                <h2>{{bike.bikename}}</h2>
+                <p>{{bike.description}}</p>
                 <a href="bike_detail_1.html"><button class="btn btn-primary">Book now</button></a>
-
             </div>
         </div>
         <hr>
-        <div class="row my-4 p-4">
-            <div class="col-md-4 p-4 text-center">
-                <img class="zoom" src="images/bike2.png" alt="" height="250px">
-            </div>
-            <div class="col-md">
-                <h2>KTM 200 Duke 2022</h2>
-                <p>Thanks to an ultra-compact single-cylinder 4-stroke power plant and a lightweight tubular chassis,
-                    the KTM 200 DUKE packs a mighty punch. An updated predatory design proudly displays its
-                    BEAST-inspired DNA and shouts DUKE. Make no mistake - the KTM 200 DUKE is an out-and-out street
-                    prowling brawler. </p>
-                <a href="bike_detail_2.html"><button class="btn btn-primary">Book now</button></a>
-            </div>
+        {%endfor%}
+        <div class="text-center mb-3">
+            <a href="/bike_listing"><button class="btn btn-secondary">See more</button></a>
         </div>
-        <hr>
-        <div class="row my-4 p-4">
-            <div class="col-md-4 p-4 text-center">
-                <img class="zoom" src="images/bike3.png" alt="" height="200px">
-            </div>
-            <div class="col-md">
-                <h2>KTM 1190 RC8</h2>
-                <p>The macho looking KTM RC8 1190 of the company which is to soon visit the Indian market is just
-                    outstanding and class apart. Being the captivating bike inculcated with latest and enhanced features
-                    is sure to prove itself the best of its kind. The company with this launch expects inflated sales
-                    attracting huge number of bike enthusiasts. The aerodynamic body graphics of the sporty model is
-                    sure to enhance its speed and the sound braking system ensures greater control with the bike..</p>
-                <a href="bike_detail_3.html"><button class="btn btn-primary">Book now</button></a>
-            </div>
-        </div>
+        
+        
 
     </div>
     <!-- Other info about bike rental website -->
