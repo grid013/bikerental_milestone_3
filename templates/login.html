@@ -51,9 +51,7 @@
                 <h1>Login</h1>
                 <p>Welcome to Bike rental app. </p>
                 <br>
-                <div id="message" class="p-2">
-                    
-                </div>
+                <div id="message" class="p-2 red">{{error}}</div>
                 <form action="/login" method="post" id="loginform">
                     <div class="mb-3">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
@@ -81,13 +79,13 @@
                 <div class="row">
                     <div class="col-md">
                         <h2>About us</h2>
-                        <a class="footerlink" href="index.html">
+                        <a class="footerlink" href="/">
                             <p>Home</p>
                         </a>
-                        <a class="footerlink" href="gallery.html">
+                        <a class="footerlink" href="/gallery">
                             <p>Gallery</p>
                         </a>
-                        <a class="footerlink" href="about.html">
+                        <a class="footerlink" href="/about">
                             <p>Contact</p>
                         </a>
                     </div>
@@ -139,8 +137,8 @@
         </div>
     </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="{{url_for( 'static', filename='js/bootstrap.bundle.min.js' )}}"></script>
+    <script src="{{url_for( 'static', filename='js/main.js' )}}"></script>
 
 
 </body>

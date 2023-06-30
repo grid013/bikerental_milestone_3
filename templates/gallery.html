@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bike rental</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{url_for( 'static', filename='images/favicon.ico' )}}">
     <!-- Boostrap css -->
     <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css' )}}">
     <!-- Gallery page stylesheet -->
@@ -37,7 +37,7 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/about">Contact</a>
                     </li>
-                    {% if userData.usertype == "user" %}
+                    {% if userData.usertype == "admin" %}
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/dashboard">Admin</a>
                     </li>
@@ -140,8 +140,8 @@
             </p>
         </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{url_for( 'static', filename='js/bootstrap.bundle.min.js' )}}"></script>
+    <script src="{{url_for( 'static', filename='js/main.js' )}}"></script>
 </body>
 
 </html>

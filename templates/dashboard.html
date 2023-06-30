@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{url_for( 'static', filename='images/favicon.ico' )}}">
     <!-- Boostrap css -->
     <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css' )}}">
     <!-- Index page stylesheet -->
@@ -61,16 +61,6 @@
         </div>
         <div class="row p-1">
             {% for bike in itemData %}
-            <!-- <div class="col-md-3 p-3 h-100">
-                <div class="card-body">
-                    <img src="/static/uploads/{{bike.image}}" class="card-img-top" width="100px">
-                </div>
-                <h2 class="py-3">{{bike.bikename}}</h2>
-                <div class="d-flex justify-content-between">
-                    
-                     
-                </div>
-            </div> -->
             <div class="col-md-3">
                 <div class="card mb-4 h-100">
                     <div class="card-body p-0">
@@ -100,13 +90,13 @@
                 <div class="row">
                     <div class="col-md">
                         <h2>About us</h2>
-                        <a class="footerlink" href="index.html">
+                        <a class="footerlink" href="/">
                             <p>Home</p>
                         </a>
-                        <a class="footerlink" href="gallery.html">
+                        <a class="footerlink" href="/gallery">
                             <p>Gallery</p>
                         </a>
-                        <a class="footerlink" href="about.html">
+                        <a class="footerlink" href="/about">
                             <p>Contact</p>
                         </a>
                     </div>
@@ -138,8 +128,8 @@
             </p>
         </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{url_for( 'static', filename='js/bootstrap.bundle.min.js' )}}"></script>
+    <script src="{{url_for( 'static', filename='js/main.js' )}}"></script>
 
 </body>
 

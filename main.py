@@ -25,7 +25,6 @@ def get_time(comment):
     hours = (diff_sec // 60) // 60
     days = ((diff_sec // 60) // 60) // 24
 
-    # print(days,minutes,hours,seconds)
 
     if days > 0:
         return str(int(days)) + " days ago"
@@ -102,7 +101,6 @@ def addBike():
             response = "Request is completed successfully."
             return redirect(url_for('dashboard'))
         except Exception as e:
-            print(e)
             response = "Request is failed."
             return render_template("addBook.html",error=response)
 
@@ -153,6 +151,8 @@ def deleteBike(bike_id=None):
         return redirect(url_for('root'))
 
     userData, loggedIn = makeSignin()
+    if loggedIn and userData["usertype"] == "user":
+        return "You are not authorized!"
 
     if request.method == 'POST':
         try:
@@ -169,6 +169,9 @@ def editBook(bike_id=None):
         return redirect(url_for('root'))
 
     userData, loggedIn = makeSignin()
+
+    if loggedIn and userData["usertype"] == "user":
+        return "You are not authorized!"
 
     if request.method == 'GET':
         productData = runQuery("SELECT * FROM bikes WHERE status = 1 and bikeid = " + bike_id +"","select")
@@ -251,8 +254,7 @@ def register():
         last_name = request.form['first_name']
         age = int(request.form['age'])
         address = request.form['address']
-        userType = "user"
-        print(password, email, first_name, last_name, age, address)
+        userType = request.form['userType']
         createDate = datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S")
 
         if (validate(email)) != None:
@@ -263,9 +265,7 @@ def register():
                 response = "Request is completed successfully."
                 
             except Exception as e:
-                print(e)
                 response = "Request is failed."
-            print(response)
             return render_template("login.html", error=response)
 
 if __name__ == '__main__':
