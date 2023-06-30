@@ -37,6 +37,11 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/about">Contact</a>
                     </li>
+                    {% if userData.usertype == "user" %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/dashboard">Admin</a>
+                    </li>
+                    {%endif%}
                     {% if not loggedIn %}
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/login">Login</a>

@@ -61,15 +61,34 @@
         </div>
         <div class="row p-1">
             {% for bike in itemData %}
-            <div class="col-md-3 p-3">
-                <img src="/static/uploads/{{bike.image}}" class="card-img-top" width="100px">
+            <!-- <div class="col-md-3 p-3 h-100">
+                <div class="card-body">
+                    <img src="/static/uploads/{{bike.image}}" class="card-img-top" width="100px">
+                </div>
                 <h2 class="py-3">{{bike.bikename}}</h2>
                 <div class="d-flex justify-content-between">
-                    <button class="btn btn-success">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
+                    
+                     
+                </div>
+            </div> -->
+            <div class="col-md-3">
+                <div class="card mb-4 h-100">
+                    <div class="card-body p-0">
+                        <a href="/bike_detail/{{bike.bikeid}}/">
+                            <img src="/static/uploads/{{bike.image}}" class="card-img-top" width="100%">
+                        </a>
+                    </div>
+                    <h5 class="card-title px-3">{{bike.bikename}}</h5>
+                    <div class="d-flex justify-content-between p-3">
+                        <a href="/bikedit/{{bike.bikeid}}/"><button class="btn btn-success">Edit</button></a>
+                        <form action="/bikedelete/{{bike.bikeid}}/" method="post">
+                            <input type="hidden" name="" id="">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            
+
             {% endfor %}
         </div>
     </div>

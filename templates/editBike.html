@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bike rental</title>
+    <title>Edit Bike</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Boostrap css -->
     <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css' )}}">
@@ -35,11 +35,6 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/about">Contact</a>
                     </li>
-                    {% if userData.usertype == "user" %}
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="/dashboard">Admin</a>
-                    </li>
-                    {%endif%}
                     {% if not loggedIn %}
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/login">Login</a>
@@ -60,30 +55,47 @@
     <!-- Bikes list -->
 
     <div class="container mt-5 py-5">
-        <h1 class="text-center">Bike Listing</h1>
-        <div class="row p-2">
-            {% for bike in itemData%}
-            <div class="col-md-3">
-                <div class="card mb-4 h-100">
-                    <div class="card-body p-0">
-                        <a href="/bike_detail/{{bike.bikeid}}/">
-                            <img src="/static/uploads/{{bike.image}}" class="card-img-top" width="100%">
-                        </a>
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 card p-4 shadow">
+                <h2>Edit bike</h2>
+                <p style="color: red;">{{error}}</p>
+                <form action="/bikedit/{{data.bikeid}}/" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="bikeName" class="form-label">Title</label>
+                        <input type="text" name="bikeName" id="bikeName" class="form-control" required value="{{data.bikename}}">
                     </div>
-                    <h5 class="card-title px-3">{{bike.bikename}}</h5>
-                        <div class="d-flex justify-content-between p-3">
-                            <p class="card-text price">{{bike.price}} £/day</p>
-                            <a href="/bike_detail/{{bike.bikeid}}/" ><button class="btn btn-primary">Book</button></a>
-                        </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" name="description" id="description" class="form-control" required value="{{data.description}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="engine" class="form-label">Engine</label>
+                        <input type="text" name="engine" id="engine" class="form-control" required value="{{data.engine}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mileage" class="form-label">Mileage</label>
+                        <input min="1" type="number" name="mileage" id="mileage" class="form-control" required value="{{data.mileage}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="transmission" class="form-label">Transmission</label>
+                        <input type="text" name="transmission" id="transmission" class="form-control" required value="{{data.transmission}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input min="1" type="number" name="price" id="price" class="form-control" required value="{{data.price}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input type="file" name="image" id="image" class="form-control" value="{{data.image}}" accept="image/*">
+                        <input type="hidden" name="image" value="{{data.image}}">
+                        <br>
+                        <img src="{{ url_for( 'static', filename='uploads/' + data.image) }}" id="uploads" alt="uploads" class="image-responsive" id="itemImage" height="200" />
+                    </div>
+                    <button class="btn btn-success" type="submit">Update details</button>
+                </form>
             </div>
-            {%endfor%}
-            
         </div>
-
     </div>
-
-
 
     <!-- Footer section  -->
     <div class="container-fluid text-white bg-black p-5">

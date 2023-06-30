@@ -35,6 +35,11 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/about">Contact</a>
                     </li>
+                    {% if userData.usertype == "user" %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/dashboard">Admin</a>
+                    </li>
+                    {%endif%}
                     {% if not loggedIn %}
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="/login">Login</a>
@@ -47,12 +52,6 @@
                         <a class="nav-link fw-bold" href="/logout">Logout</a>
                     </li>
                     {%endif%}
-                    {% if userData.usertype == "user" %}
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="/dashboard">Admin</a>
-                    </li>
-                    {%endif%}
-
                 </ul>
             </div>
         </div>
@@ -150,7 +149,7 @@
             <div class="col-md">
                 <h2>{{bike.bikename}}</h2>
                 <p>{{bike.description}}</p>
-                <a href="bike_detail_1.html"><button class="btn btn-primary">Book now</button></a>
+                <a href="/bike_detail/{{bike.bikeid}}/"><button class="btn btn-primary">Book now</button></a>
             </div>
         </div>
         <hr>
