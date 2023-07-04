@@ -188,8 +188,16 @@ Whilst coding the site I have ensured that the site is accesible for all. This i
 ## Technologies Used
 
 ### Languages Used 
-* HTML and CSS
-* JavaScript
+## Technologies Used
+ - Languages Used
+    * Python
+    * HTML
+    * CSS
+    * JavaScript
+ - Frameworks and Libraries Used
+    * Django
+    * Bootstrap
+    * jQuery
 
 ### Software, Frameworks & Libraries Used
 
@@ -247,3 +255,46 @@ To copy a GitHub repository:-
 * first navigate to the repository you wish to copy. 
 * click on the 'Code' button (which has a download icon) and copy the link provided.
 * in the Gitpod Terminal, navigate to the directory where you wish to place the clone. Then, type 'git clone' and paste the link you copied earlier and press enter. This process can also be completed using VSCode.
+
+## Deployment & Local Development
+* `Deploying to Heroku`
+- Create a Heroku account: First, create a free account on Heroku's website.
+
+- Install Heroku CLI: Install Heroku CLI on your local machine, which can be done by following the instructions provided on Heroku's website.
+
+- Create a new Heroku app: Log in to your Heroku account and create a new app by clicking on the "New" button and selecting "Create new app".
+
+- Set up PostgreSQL: Add the Heroku Postgres add-on to your app. You can do this by clicking on the "Resources" tab in your app dashboard, then searching for and selecting "Heroku Postgres" in the "Add-ons" section.
+
+- Configure Django settings: Update your Django settings.py file to use the environment variable for the database connection.
+
+- Create a requirements.txt file: Create a requirements.txt file that lists all the required packages and dependencies for your Django project.
+
+- Create a Procfile: Create a Procfile in the root directory of your project and define the command to run your Django app.
+
+- Push your code to Heroku: Use Git to push your code to Heroku. You can do this by running the following commands in your terminal:
+```sh 
+    $ heroku login
+    $ heroku git:remote -a your-app-name
+    $ git add .
+    $ git commit -am "Initial commit"
+    $ git push heroku master
+```
+- Migrate the database: Run the following command to apply any database migrations to the Heroku Postgres database:
+```sh
+    $ heroku run python manage.py migrate
+```
+- Launch the app: Finally, launch your app on Heroku by running the following command:
+```sh
+    $ heroku ps:scale web=1
+``` 
+# Local Development
+## How to Fork
+To install and run the app locally, follow these steps:
+
+- Clone the repository to your local machine.
+Install the required packages using` pip install -r requirements.txt`.
+- Create a PostgreSQL database and configure the database settings in settings.py.
+- Run `python manage.py makemigrations`. 
+- Run `python manage.py migrate` to apply the database migrations.
+- Run `python manage.py runserver` to start the development server.
