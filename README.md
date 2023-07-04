@@ -35,6 +35,7 @@ Head to the deployed site at [Bike Rental](https://grid013.github.io/bikerental/
   * [Local Development]
     * [How to Fork]
     * [How to Clone]
+    * [Deploying to Heroku]
  
 <br>
 
@@ -44,6 +45,8 @@ Head to the deployed site at [Bike Rental](https://grid013.github.io/bikerental/
 Bike rental is a webiste used to rent best bikes from the top supplieres. We offers best bikes including high-quality bikes, ranging from mountain bikes to road bikes to hybrids, which are perfect for tackling any terrain.
 
 Our suppliers provide both automatic and manual transmission bikes in the UK, however, availability may vary depending on the supplier and the location where you are renting the vehicle.
+
+After we have built the project in Html, Css and Javascript, now it's time to add other important parts to our application to make it as functional as possible. The focus will be on using Python, Flask, Django and creating the database. After completion of work, customers will have the opportunity to leave comments and ratings for their experience with our company. Also, Admin will now have the opportunity to add or remove the products that we offer. All the new options that have been added are aimed at creating a closer relationship and trust with our clients.
 ## User Experience
 ## User Stories
 - First Time Visitor Goals
@@ -175,6 +178,9 @@ Using Chrome Developer tools each page was verified to be working correctly.
   * [Login Page](documention/login.png)
   * [Register Page](documention/register.png)
   * [Contact Page](documention/contact.png)
+  * [Reviews Page](documention/register.png)
+  * [Add Page](documention/add%2Cpage.png)
+  * [Add Form Page](documention/add.form.png)
 
 ### Accessibility
 
